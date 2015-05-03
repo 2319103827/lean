@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>chunyu-learning</title>
+</head>
+<style type="text/css">
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0; }
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+
+body, button, input, select, textarea {
+  font: 14px/1.5 tahoma,arial,"Microsoft Yahei","Hiragino Sans GB",\5b8b\4f53; }
+
+input, select, textarea {
+  font-size: 100%; }
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+
+th {
+  text-align: inherit; }
+
+
+fieldset, img {
+  border: 0; }
+
+
+iframe {
+  display: block; }
+
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+
+del {
+  text-decoration: line-through; }
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: 500; }
+
+
+ol, ul {
+  list-style: none; }
+
+
+caption, th {
+  text-align: left; }
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: 500; }
+
+i {
+  font-style: initial; }
+
+u {
+  text-decoration: none; }
+
+q:before, q:after {
+  content: ''; }
+
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+
+
+ins, a {
+  text-decoration: none; }
+
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+i {
+  font-style: normal; }
+
+.learning{ width: 100%; height: 100%; background-color: pink; opacity: 0.5; text-align: center; font-size: 25px; padding: 20px;}
+.abstract{  width: 100%; text-align: left; padding: 10px; border: 1px solid pink; font-size: 20px; display: block;}
+.model{ width: 100%;  margin-bottom: 10px; border: 1px solid #E6E6E6; padding: 10px;}
+.title{ width: 100%; text-align: left; padding: 10px; font-size: 22px;}
+.content{ width: 100%; text-align: left; padding: 10px; font-size: 16px;}
+</style>
+<body>
+<div class="learning"><b>the learning summary of chunyu company for billyang</b></div>
+<ul>
+    <li>
+        <a class="abstract" href="#index1"><b>
+            1.css 权威指南
+        </b></a>    
+    </li>
+    <li>
+        <a class="abstract" href="#index2"><b>
+            2.工作任务技术总结
+        </b></a>    
+    </li>
+    <li>
+        <a class="abstract" href="#index3"><b>
+            3.个人问题和解决方法
+        </b></a>    
+    </li>
+
+    <li class="model">
+        <div class="title" id="index1" ><b>
+            css 权威指南
+        </b></div>
+        <div class="content">
+            1.当浏览器解析样式的时候不同内核浏览器解析css样式可能效果有些差异。实际工作中css样式清除默认样式的做法是（如上）<br/>
+            2.display:<br/>
+            在工作中遇到一个div中包含几个span，行内元素用到了display，最终span会脱离父级，显示效果有差异。<br/>
+            通过对父级清除所有浮动（clear:both），解决浮动塌陷问题<br/>
+            3.标签中写样式更灵活，但最好是通过link嵌入样式文件，其中一些列入media可解决一些媒体设备等问题
+            <br/>
+            4.@import url(xx.css)<br/>.@import url(yy.css)更灵活的加载需要的css文件<br>
+        </div>
+    </li>
+    <li>
+        <div class="title"  id="index2"><b>
+            工作任务技术总结
+        </b></div>
+        <div class="content">
+            1.文件的结构管理<br>
+            a.freepa中运用到node.js、nodeajax模拟服务器环境，方便前后端ajax数据交互，数据结构采用的是src文件夹+demo文件夹+nodeajax<br>scr:css+images+js+other文件夹用来分别存放相应的文件<br>demo:xx.html<br>
+            b.css文件，js文件命名规范化，base-common-page//setting-data-method<br>压缩css和js文件能够让编译更流畅，加载更快，采用的工具是gulp<br>
+            2.操作命令：gulp命令行操作<br>a.cd C:\Users\chunyukj-00199\Desktop\chunyu\freepa<br>
+            b.gulp启动nodeajax 操作nodemon app.js<br>resource:https://github.com/nimojs/gulp-book<br>
+            3.前后端需要约定一些交互数据规则方便开发的提高，很有必要!<br>
+            4.js组件的使用和开发在实际项目中也具有很大作用，节省开发时间，提高开发水平<br>
+            5.相应一些必备的网站协助开发学习<br>
+            6.handlebars数据模块，提高开发效率<br>
+            7.ps切图命令<br>a.右侧面板图层 可以点眼睛隐藏<br>b.CTRL+ALT+shift+E  图层盖章<br>c.左侧工具
+            栏选择这个工具，选中想要存出的图片，然后ctrl+c  在ctrl+N  在ctrl+V这样图片就单独粘贴进来<br>
+            8.ajax jsonp 实现数据交互跨域问题：<br>a.:php{{js123(echo$xx)}}<br>js:$.ajax({dataType:'jsonp',type:'get',jsonpCallback: 'js2345',url:'http://voice.hua.li/listenID.php?testID='+value<br><br>
+            9.freepa版聊页面中，项目中需要考虑周全一些，前端代码+前后端交互，例如：根据期数保存对应数据信息<br><br>
+        </div>
+    </li>
+    <li>
+        <div class="title"  id="index3"><b>
+            个人问题和解决方法
+        </b></div>
+        <div class="content">
+        提供解决方向：<br>
+            1.nodeajax,gulp安装详解，在国内无法翻墙的情况下如何让初学者自己加载这些文件完成必要的开发？<br>
+            2.ajax数据交互细则？<br>
+            3.sea.js引用文件，handlebars等文件引入方式<br>
+            4.版聊404/500ajax请求问题(200:成功404：找不到500：服务器内部错误)<br>
+            5.handlebars的一堆字符是什么?提示错误信息时，如何调试<br>
+            6.js实现键盘f11放大缩小功能，jq组件？<br>
+            7.huali语音项目的cleartimeout()无效？<br>
+            8.个人：后端知识<br><br><br>
+        </div>
+    </li>
+</ul>
+</body>
+</html>
