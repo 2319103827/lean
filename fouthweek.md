@@ -1,5 +1,6 @@
 
 - **jquery 实战**
+- 
 >jquery($)包装DOM对象，所有的jq方法都可以直接作用在最初的选择器上，一层层作用
 
 >window.onload=function(){} 加载完DOM结构+外部资源（图片、flash）执行
@@ -78,6 +79,7 @@ $('img').not(function(){
   return !$(this).has('a')
 })
 $('img').addClass('a').filter('[title*=a]').addClass('a')
+$('img[title]').not('[title*=a]')
 ```
 -------------------
 
